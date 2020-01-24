@@ -1,0 +1,170 @@
+body{
+  margin: 0;
+  overflow: auto;
+  font-family: helvetica;
+}
+
+header{
+  background-color: #404040;
+  overflow: auto;
+  padding: 10px;
+}
+
+header ul{
+  list-style-type: none;
+  display: inline;
+}
+
+header ul a{
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  /* background-color: #737373; */
+	color: #FFFFFF;
+}
+
+
+section{
+  height: 1000px;
+  overflow: auto;
+  text-align: justify;
+  margin: auto;
+  width: 70%;
+  padding: 10px;
+}
+
+.welcome{
+  text-align: center;
+}
+
+footer{
+  background-color: #404040;
+  overflow: auto;
+  padding: 10px;
+  list-style-type: none;
+}
+
+footer li{
+  list-style-type: none;
+}
+
+.user_buttons a{
+  float:right;
+  margin-bottom: 10px;
+}
+
+.user_buttons p{
+  font-size: 40px;
+  font-family: tahoma;
+  margin-left: 10px;
+}
+
+.nav_left li{
+  float: left;
+}
+
+.nav_right li{
+  float: right;
+}
+
+.nav_top{
+  overflow: auto;
+  border-bottom: 1px solid black;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.nav_top h1{
+  font-size: 50px;
+  display: inline;
+}
+
+#logo{
+  width: 175px;
+  height: auto;
+}
+
+#logo_link{
+  text-decoration: none;
+  color: black;
+}
+
+#generations_image{
+  width: 60%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.site_map{
+  color: white;
+  text-decoration: none;
+}
+
+.site_map a{
+  color: white;
+  text-decoration: none;
+}
+
+.event_details li{
+  list-style-type: none;
+  width: 500px;
+}
+
+#host_photo{
+  float: left;
+  margin-right: 10px;
+  height: 110px;
+  margin-top: 15px;
+}
+
+.rsvp_box{
+  border: 1px dashed black;
+  padding: 10px;
+  float: right;
+  background-color: #f2f2f2;
+}
+
+button{
+  background-color: lightblue;
+}
+
+.details_box{
+  float: left;
+}
+
+.edit_button{
+  background-color: #737373;
+  color: white;
+  padding: 5px;
+  text-decoration: none;
+}
+
+table, th{
+  /* padding: 5px; */
+  border: 1px solid black;
+}
+
+th{
+  border: 1px solid black;
+  padding: 20px;
+}
+
+td{
+  background-color: lightgrey;
+  padding: 10px;
+}
+
+.user_table{
+  text-align: center;
+}
+
+.links_list li{
+  list-style-type: none;
+}
+
+.links_list li a{
+  color: inherit;
+}
