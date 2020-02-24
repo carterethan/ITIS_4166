@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/styles.css">
+  <title><%= data.getTopic(); %> - <%= data.getName(); %></title>
+</head>
+
+<body>
+  <%- include('header.ejs'); -%>
+  <section>
+    <h2><%= data.getTopic(); %> - <%= data.getName(); %></h2>
+
+    <p><%= data.getDetails(); %></p>
+
+    <div class="details_box">
+      <img src="/assets/images/ethan.jpeg" alt="profile picture" id="host_photo">
+      <ul class="event_details">
+        <li>Hosted by Ethan Carter</li>
+        <li><%= data.getDate(); %></li>
+        <li><%= data.getTime(); %></li>
+        <li>
+          <address>
+            <%= data.getLocationName(); %><br>
+            <%= data.getAddressLine1(); %><br>
+            <%= data.getAddressLine2(); %><br>
+          </address>
+        </li>
+      </ul>
+    </div>
+
+    <div class="rsvp_box">
+      <label for="rsvp">Will you be attending this event?</label><br><br>
+      <button type="button" name="yes" id="rsvp">Yes</button>
+      <button type="button" name="no" id="rsvp_no">No</button>
+      <button type="button" name="unsure" id="rsvp_unsure">Unsure</button>
+    </div>
+  </section>
+  <%- include('footer.ejs'); -%>
+</body>
+
+
+
+</html>

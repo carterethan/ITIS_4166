@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/styles.css">
+  <title>Miata Club - Saved Connections</title>
+</head>
+
+
+<body>
+  <%- include('header.ejs'); -%>
+
+  <section>
+    <h1>Your Saved Connections</h1>
+    <table class="user_table">
+      <tr>
+        <th>Event</th>
+        <th>Category</th>
+        <th>RSVP</th>
+        <th colspan="2">Edit</th>
+      </tr>
+      <tr>
+        <td>Cars & Coffee</td>
+        <td>Show</td>
+        <td>Yes</td>
+        <td>
+          <a href="connection.html" class="edit_button">Update</a>
+        </td>
+        <td>
+          <a href="savedConnections.html" class="edit_button">Delete</a>
+        </td>
+      </tr>
+      <tr>
+        <td>Miatas at the Gap</td>
+        <td>Road Series</td>
+        <td>Yes</td>
+        <td>
+          <a href="connection.html" class="edit_button">Update</a>
+        </td>
+        <td>
+          <a href="savedConnections.html" class="edit_button">Delete</a>
+        </td>
+      </tr>
+    </table>
+  </section>
+  <%- include('footer.ejs'); -%>
+</body>
+
+</html>
