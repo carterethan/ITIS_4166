@@ -17,22 +17,22 @@
     <ul class="links_list">
 
       <!-- Populate a list of links for connections in the "Car Show" topic -->
-      <% data.forEach(function(item){ %>
-        <% if(item.getTopic() == "Car Show"){ %>
-          <li><a href="/connection/<%= item.getConnectionID() %>"><%= item.getName() %></a></li>
+      <% for(let i = 0; i < data.connections.length; i++){ %>
+        <% if(data.connections[i]._connectionTopic == "Car Show"){ %>
+          <li><a href="/connection/<%= data.connections[i]._connectionId %>"><%= data.connections[i]._connectionName %></a></li>
         <% } %>
-      <% }); %>
+      <% } %>
     </ul>
 
     <h3>Road Series</h3>
     <ul class="links_list">
 
       <!-- Populate a list of links for connections in the "Road Series" topic -->
-      <% data.forEach(function(item){ %>
-        <% if(item.getTopic() == "Road Series"){ %>
-          <li><a href="/connection/<%= item.getConnectionID() %>"><%= item.getName() %></a></li>
+      <% for(let i = 0; i < data.connections.length; i++){ %>
+        <% if(data.connections[i]._connectionTopic == "Road Series"){ %>
+          <li><a href="/connection/<%= data.connections[i]._connectionId %>"><%= data.connections[i]._connectionName %></a></li>
         <% } %>
-      <% }); %>
+      <% } %>
     </ul>
   </section>
 

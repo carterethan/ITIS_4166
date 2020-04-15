@@ -1,4 +1,4 @@
-var Connection = require('../models/connection');
+const Connection = require('../models/connection');
 
 //Create Connection objects
 var carShow1 = new Connection();
@@ -85,15 +85,63 @@ connections.push(roadSeries1);
 connections.push(roadSeries2);
 connections.push(roadSeries3);
 
+class ConnectionDB{
+  constructor() {}
+
+  getConnections(){
+      return connections;
+  }
+
+  getConnection(connectionId){
+    if (connectionId !== undefined) {
+      let connection = connections.filter(
+        (connection) => connection._connectionId == connectionId
+      );
+      return connection[0];
+    }else{
+      throw new Error("Invalid Connection Id");
+    }
+  }
+
+  getTopics(){
+    let topics = new Array();
+    connections.forEach((connection) => {
+      // if (!topics.includes(connection.getConnectionTopic())){
+        topics.push(connection.getConnectionTopic());
+      // }
+    });
+    return topics;
+  }
+}
+
 //Function to display ALL of the connections. To be used on the 'connections' view.
-function getConnections(){
-    return connections;
-}
-
+// function getConnections(){
+//     return connections;
+// }
+//
 //Function to display a single connection based on the id parameter.
-function getConnection(id){
-  return connections[id];
-}
+// function getConnection(id){
+//   if (connectionId !== undefined) {
+//     let connection = connections.filter(
+//       (connection) => connection._connectionId == connectionId
+//     );
+//     return connection[0];
+//   }else{
+//     throw new Error("Invalid Connection Id");
+//   }
+// }
+//
+// function getTopics(){
+//   let topics = new Array();
+//   connections.forEach((connection) => {
+//     if (!topics.includes(connection.getConnectionTopic())){
+//       topics.push(connection.getConnectionTopic())
+//     }
+//   });
+//
+//   if (topics !== undefined){
+//     return topics;
+//   }
+// }
 
-module.exports.getConnections = getConnections;
-module.exports.getConnection = getConnection;
+module.exports = ConnectionDB;

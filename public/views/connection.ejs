@@ -4,37 +4,40 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="/assets/stylesheets/styles.css">
-  <title><%= data.getTopic(); %> - <%= data.getName(); %></title>
+  <title><%= data._connectionTopic %> - <%= data._connectionName %></title>
 </head>
 
 <body>
   <%- include('header.ejs'); -%>
   <section>
-    <h2><%= data.getTopic(); %> - <%= data.getName(); %></h2>
+    <h2><%= data._connectionTopic %> - <%= data._connectionName %></h2>
 
-    <p><%= data.getDetails(); %></p>
+    <p><%= data._details %></p>
 
     <div class="details_box">
       <img src="/assets/images/ethan.jpeg" alt="profile picture" id="host_photo">
       <ul class="event_details">
         <li>Hosted by Ethan Carter</li>
-        <li><%= data.getDate(); %></li>
-        <li><%= data.getTime(); %></li>
+        <li><%= data._date %></li>
+        <li><%= data._time %></li>
         <li>
           <address>
-            <%= data.getLocationName(); %><br>
-            <%= data.getAddressLine1(); %><br>
-            <%= data.getAddressLine2(); %><br>
+            <%= data._locationName %><br>
+            <%= data._addressLine1 %><br>
+            <%= data._addressLine2 %><br>
           </address>
         </li>
       </ul>
     </div>
 
     <div class="rsvp_box">
-      <label for="rsvp">Will you be attending this event?</label><br><br>
-      <button type="button" name="yes" id="rsvp">Yes</button>
-      <button type="button" name="no" id="rsvp_no">No</button>
-      <button type="button" name="unsure" id="rsvp_unsure">Unsure</button>
+      <form method="post">
+        <label for="rsvp">Will you be attending this event?</label><br><br>
+        <input hidden name="connectionId" value="<%= data._connectionId %>">
+        <button type="submit" formaction="/savedConnections/rsvp" name="rsvp" id="rsvp" value="Yes">Yes</button>
+        <button type="submit" formaction="/savedConnections/rsvp" name="rsvp" id="rsvp" value="No">No</button>
+        <button type="submit" formaction="/savedConnections/rsvp" name="rsvp" id="rsvp" value="Maybe">Maybe</button>
+      </form>
     </div>
   </section>
   <%- include('footer.ejs'); -%>
